@@ -1,24 +1,30 @@
-# Advanced Coding Project
+# 🎬 Advanced Coding Project
 
-## How to load a csv file in MySQL:
-Step 1: Open MySQL Workbench, create a new database and name it.
+---
 
-<img width="441" alt="Screenshot 2025-02-12 at 7 27 06 pm" src="https://github.com/user-attachments/assets/3f9a403c-9090-4439-ba43-b42ef7a75cc8" />
+## 📂 How to Load a CSV File in MySQL
 
-<img width="1254" alt="Screenshot 2025-02-12 at 7 27 46 pm" src="https://github.com/user-attachments/assets/f7a17bea-a90b-405d-8a86-70b5a9d342a9" />
+### Step 1: Create a New Database
+Open **MySQL Workbench**, create a new database, and name it.
 
-Step 2:  Right-click on the database, click "Table Data Import Wizard".
+<img width="441" alt="Screenshot 2025-02-12 at 7 27 06 pm" src="https://github.com/user-attachments/assets/8730cb14-8eb0-407d-9ff4-f2ea278ba03e" />
 
-<img width="565" alt="Screenshot 2025-02-12 at 7 29 12 pm" src="https://github.com/user-attachments/assets/8d3a0ab9-251a-47e1-ba3a-ef7a7286de3b" />
+### Step 2: Use the Table Data Import Wizard
+Right click on the database and select **"Table Data Import Wizard"**.
+
+<img width="565" alt="Screenshot 2025-02-12 at 7 29 12 pm" src="https://github.com/user-attachments/assets/3287e849-1f07-4ce7-ade8-b029318c391a" />
 
 
-Step 3: Click "Browse"  and select the CSV file you want to import.
+### Step 3: Select Your CSV File
+Click **"Browse"**, select the CSV file, and proceed with the import process.
 
-<img width="783" alt="Screenshot 2025-02-12 at 7 29 40 pm" src="https://github.com/user-attachments/assets/1e4b2d64-563e-49f5-8963-1ee27e60386a" />
+<img width="783" alt="Screenshot 2025-02-12 at 7 29 40 pm" src="https://github.com/user-attachments/assets/044a871b-7e7c-4907-afe4-6a074ef0b9b8" />
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## -- Display All Data in The File
+---
+## 📊 SQL Queries for Data Analysis
+
+## -- Display All Data
 
 ```sql
 SELECT * FROM Project.cleaned_file;
@@ -26,7 +32,7 @@ SELECT * FROM Project.cleaned_file;
 <img width="1250" alt="Screenshot 2025-02-12 at 7 32 20 pm" src="https://github.com/user-attachments/assets/00f5c7af-7c04-46e1-a869-1b03b61e0da4" />
 
 
-## 1- Display All Theaters With it's Rating
+## 1- Display All Theaters with Their Ratings
 
 ```sql
 SELECT name, rating FROM cleaned_file;
@@ -58,7 +64,7 @@ SELECT AVG(rating) AS avg_rating FROM cleaned_file;
 <img width="1250" alt="Screenshot 2025-02-12 at 9 35 04 pm" src="https://github.com/user-attachments/assets/b3ce02e6-d5f9-49e6-ae9d-8344e0fa40f8" />
 
 
-## 5- Display the locations with a rating = 5 and more than 20,000 reviews
+## 5- Display Locations with Rating = 5 and More Than 20,000 Reviews
 
 ```sql
 SELECT name, rating, review_count 
@@ -69,7 +75,7 @@ WHERE rating = 5 AND review_count > 20000;
 
 
 
-## 6- Display Top 5 Cinema According to Rating
+## 6- Display Top 5 Cinemas by Rating
 
 ```sql
 SELECT * FROM cleaned_file
@@ -80,7 +86,7 @@ LIMIT 5;
 
 
 
-## 7- Display Theaters That Hosts Movies with rating 3 or more
+## 7- Display Theaters Hosting Movies with Rating 3 or More
 
 ```sql
 SELECT * FROM cleaned_file 
@@ -89,7 +95,7 @@ WHERE genre LIKE '%Movie theater%' AND rating >= 3;
 <img width="1250" alt="Screenshot 2025-02-12 at 9 58 23 pm" src="https://github.com/user-attachments/assets/bec0b3f1-c2af-4285-a689-05747cc66afb" />
 
 
-## 8- Display Theaters Showing Action Movies With Rating 4 or More and Review Count more than 15000, Order By Review Count
+## 8- Display Action Movies Theaters with Rating 4+, Reviews > 15,000
 
 
 ```sql
@@ -103,7 +109,7 @@ ORDER BY review_count;
 
 
 
-## 9- Display the All Parks in Riyadh With Ratings in Descending Order
+## 9- Display All Parks in Riyadh (Sorted by Rating)
 
 ```sql
 SELECT name, rating, review_count, location
@@ -114,7 +120,7 @@ ORDER BY rating DESC;
 <img width="1250" alt="Screenshot 2025-02-12 at 10 14 33 pm" src="https://github.com/user-attachments/assets/e7098ec6-2794-4529-915b-eb9633edd618" />
 
 
-## 10- The Average Rating for locations grouped by genre.
+## 10- Average Rating for Locations Grouped by Genre
 
 ```sql
 SELECT genre, AVG(rating) AS avg_r 
@@ -124,4 +130,4 @@ GROUP BY genre;
 <img width="1250" alt="Screenshot 2025-02-12 at 10 26 06 pm" src="https://github.com/user-attachments/assets/146639f6-679c-4f2d-afd9-f33ba1d63398" />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Thank You :white_heart:
+# 🎉 Thank You 🤍
